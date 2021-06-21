@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-21T12:23:49.501Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36" etag="8FK88bfgr2rv0UmnfXto" version="14.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-21T12:50:50.210Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36" etag="h8-pZouMm_3yiGXww1i5" version="14.8.0" type="github">
   <diagram id="ERvYv8DdHMbPDZ35Vy06" name="Page-1">
     <mxGraphModel dx="846" dy="551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#114B5F" math="0" shadow="0">
       <root>
@@ -140,7 +140,7 @@
             <mxPoint x="350" y="1050" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0O2sNTZ3Sp0WWgC0A8mW-40" value="Enregistrement de la fiche" style="whiteSpace=wrap;html=1;arcSize=40;fontColor=#E4FDE1;fillColor=#F45B69;strokeColor=#028090;rounded=1;" vertex="1" parent="1">
+        <mxCell id="0O2sNTZ3Sp0WWgC0A8mW-40" value="validation de la fiche" style="whiteSpace=wrap;html=1;arcSize=40;fontColor=#E4FDE1;fillColor=#F45B69;strokeColor=#028090;rounded=1;" vertex="1" parent="1">
           <mxGeometry x="290" y="1050" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0O2sNTZ3Sp0WWgC0A8mW-41" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#028090;labelBackgroundColor=#114B5F;fontColor=#E4FDE1;curved=1;" edge="1" source="0O2sNTZ3Sp0WWgC0A8mW-40" parent="1">
