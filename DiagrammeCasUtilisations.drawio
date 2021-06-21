@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-06-21T12:21:38.733Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36" etag="lSMpN11xjjCBBOnkJGtX" version="14.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-21T12:53:30.703Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.106 Safari/537.36" etag="-70p6sn2r7dMn7-jcRj7" version="14.8.0" type="github">
   <diagram id="QEZS7bucPEMeShe7DZa2" name="Page-1">
     <mxGraphModel dx="1692" dy="2202" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -116,15 +116,6 @@
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="440" y="330" as="sourcePoint" />
             <mxPoint x="610" y="330" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nZTqsQucaVytUGo2wCWi-41" value="Création d&#39;une fiche&amp;nbsp;&lt;br&gt;&quot;service&quot;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="200" y="670" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="nZTqsQucaVytUGo2wCWi-42" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="nZTqsQucaVytUGo2wCWi-3" target="nZTqsQucaVytUGo2wCWi-41" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="450" y="520" as="sourcePoint" />
-            <mxPoint x="500" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ajAB54CR1VQyiP3QOef6-3" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1">
