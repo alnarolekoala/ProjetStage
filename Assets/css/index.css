@@ -1,37 +1,16 @@
-#map {
-    /* position de la map */
-    position: relative;
-    top: 100px;
-    left: 10%;
-
-  
-}
 #barreDeRecherche {
     /* longueur de la barre de recherche */
     width: 450px;
 }
-#searchZone {
-    /* position de zone de recherche */
- position: relative;
- top: 200px;
- left: 10%
-}
 
 
 #filtre {
-    /*  filtre */
+    /*  filtre de la recherche avancée */
     border: 1px solid black;
     margin-top: 2%;
     padding-left: 5px;
     background-color:beige;
     width: 100%;
-}
-
-
-body {
-    /* Acceuil background */
-    background-image: url("../img/background.png");
-    background-size: 100%;
 }
 
 #description {
@@ -50,10 +29,285 @@ body {
     box-shadow: 0 0 0 1px #eee;
 }
 
-path {
-    
-    
+/*==================== Mise en page de la barre de navigation ====================*/
+
+/* Affichage de l'image en page d'accueil */
+.home {
+    display: flex; 
+    background: url("../img/background.png") no-repeat center;
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 1rem;
+    padding-top: 10rem;
 }
+
+/* Disposition en grille */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* suppression des marges du menu mobile  */
+ul.nav__list.grid {
+    margin: 0;
+    padding: 0;
+}
+
+/* Entête de la page */
+.header {
+    width: 100%;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;      /* Position de la navbar en haut de page */
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+}
+
+/* Retrait des puces (ou marqueurs) des éléments d'une liste */
+ul {
+    list-style: none;
+}
+
+/* Retrait des décorations des liens */
+a.nav__link {
+    text-decoration: none;
+}
+
+/* Configuration de la taille des images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Barre de navigation */
+.nav {
+    margin: 0 1rem;
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo et bouton à bascule */
+.nav__logo {
+    width: 10rem;
+}
+
+.nav__toggle {
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Changement de couleur du bouton à bascule au survol de la souris */
+.nav__toggle:hover {
+    color: #d9ff00;
+}
+
+/* Configuration de l'affichage du menu pour les écrans en dessous de 989px */
+@media screen and (max-width: 989px) {
+    .nav__menu {
+        position: fixed;
+        top: -100%; /* Masquage du contenu du menu */
+        left: 0;
+        width: 100%;
+        background-color: rgb(14, 26, 52);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        border-radius: 0 0 2rem 2rem;
+        transition: ease-in-out 0.5s;
+    }
+}
+
+
+/* Disposition du menu selon la grille suivante */
+.nav__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Disposition du menu de navigation */
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Changement de couleur de la liste du menu au survol de la souris */
+.nav__link:hover {
+    color: #d9ff00;
+}
+
+/* Taille des icônes de la liste du menu */
+.nav__icon {
+    font-size: 1.2rem;
+}
+
+/* Configuration du bouton de fermeture de la liste du menu */
+.nav__close {
+    position: absolute;
+    right: 1.3rem;
+    top: 11rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Changement de couleur du bouton de fermeture au survol de la souris */
+.nav__close:hover {
+    color: #d9ff00;
+}
+
+/* show menu */
+.show-menu {
+    top: 0;
+}
+
+/* Activation des liens de navigation */
+.active-link {
+    color: #d9ff00;
+}
+
+/* Changement de l'arrière plan du menu de navigation */
+.scroll-header {
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/*==================== Gestion de l'affichage en fonction des écrans ci-dessous ====================*/
+/* Pour les petits écrans */
+@media screen and (max-width: 350px) {
+    #map {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .nav {
+        height: 3.5rem;
+    }
+
+    .nav__menu {
+        padding: 2rem 0.25rem 4rem;
+    }
+
+    .nav__list {
+        column-gap: 0;
+    }
+
+    .nav__logo {
+        width: 8rem;
+    }
+
+    .nav__toggle {
+        font-size: 1rem; 
+    }
+
+    .nav__link {
+        font-size: 0.8rem;
+    }
+
+    .sizeText {
+        width: max-content;
+        height: max-content;
+        font-size: 0.8rem;  
+    }
+}
+
+/* Pour les petits écrans */
+@media screen and (min-width: 351px) and (max-width: 567px) {
+    #map {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media screen and (min-width: 568px) and (max-width: 767px) {
+    #map {
+        max-width: 75%;
+        max-height: 75%;
+    }
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media screen and (min-width: 768px)  and (max-width: 989px) {
+    #map {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    /* .sizeText {
+        width: max-content;
+        height: max-content;
+        font-size: 0.9rem;  
+    } */
+}
+
+@media screen and (min-width: 990px) and (max-width: 1999px) {
+    .nav__toggle {
+        display: none;
+    }
+
+    /* repositionnement de la navbar */
+    .nav {
+        height: 4.5rem;
+    }
+
+    .nav__icon, .nav__close, .nav__toggle {
+        display: none;
+    }
+
+    .nav__list {
+        display: flex;
+    }
+
+    .nav__menu {
+        margin-left: auto;
+    } 
+    
+    #map {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+
+    svg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
 
 
 
