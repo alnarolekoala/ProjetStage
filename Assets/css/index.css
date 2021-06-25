@@ -1,0 +1,60 @@
+#map {
+    /* position de la map */
+    position: relative;
+    top: 100px;
+    left: 10%;
+
+  
+}
+#barreDeRecherche {
+    /* longueur de la barre de recherche */
+    width: 450px;
+}
+#searchZone {
+    /* position de zone de recherche */
+ position: relative;
+ top: 200px;
+ left: 10%
+}
+
+
+#filtre {
+    /*  filtre */
+    border: 1px solid black;
+    margin-top: 2%;
+    padding-left: 5px;
+    background-color:beige;
+    width: 100%;
+}
+
+
+body {
+    /* Acceuil background */
+    background-image: url("../img/background.png");
+    background-size: 100%;
+}
+
+#description {
+    /* info Bulle */
+    position: absolute;
+    font-size: 18px;
+    text-align: center;
+    background: white;
+    padding: 1px 15px;
+    z-index: 5;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    color: #21669e;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px #eee;
+}
+
+path {
+    
+    
+}
+
+
+
+  
