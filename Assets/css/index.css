@@ -1,8 +1,8 @@
+
 #barreDeRecherche {
     /* longueur de la barre de recherche */
     width: 450px;
 }
-
 
 #filtre {
     /*  filtre de la recherche avancée */
@@ -318,8 +318,4 @@ img {
         max-height: 100%;
     } */
 }
-
-
-
-
   
