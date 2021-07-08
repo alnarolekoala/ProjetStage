@@ -3,9 +3,68 @@ let  paths = map.getElementsByTagName('path');
 const filtreButton = document.getElementById('filtreButton');
 const filtre = document.getElementById('filtre');
 let infoBulle = document.getElementById('description');
+const verif = document.getElementById('verif').value;
+//  élément des modals de connexion/inscription
+
+const btnCloseModalI = document.getElementById('btnCloseModalI');
+const btnCloseModalC = document.getElementById('btnCloseModalC');
+const modalI = document.getElementById('modal-inscription');
+const modalC = document.getElementById('modal-connexion')
+const btnInscription = document.getElementById('btn-inscription');
+const btnConnexion = document.getElementById('btnConnexion');
+const userNameConnexion = document.getElementById('userNameConnexion');
+const userNameInscription = document.getElementById('userNameInscription');
+const userPasswordConnexion = document.getElementById('userPasswordConnexion');
+const userPasswordInscription = document.getElementById('userPasswordInscription');
+const userMailInscription = document.getElementById('userMailInscription'); 
+
+
 const body = document.body;
 let Mouse_X; 
 let Mouse_Y;
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  if(verif == "error"){
+    btnInscription.click();
+    verif= "";
+  }
+ 
+});
+
+btnCloseModalC.addEventListener('click', function () {
+  userNameConnexion.value = "";
+  userPasswordConnexion.value = "";
+  modalC.style.display = 'none';
+  
+
+})
+
+btnCloseModalI.addEventListener('click', function () {
+  modalI.style.display = 'none';
+  userNameInscription.value = "";
+  userMailInscription.value = "";
+  userPasswordInscription.value = "";
+
+
+})
+
+
+
+btnInscription.addEventListener('click', function () {
+  
+  modalI.style.display = 'block';
+
+})
+
+btnConnexion.addEventListener('click', function () {
+  
+  modalC.style.display = 'block';
+
+})
 
 // Evenement clique sur le bouton "filtre"
 filtreButton.addEventListener('click', function(){

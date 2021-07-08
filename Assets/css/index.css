@@ -1,4 +1,21 @@
+.modal-backdrop
+{
+    background-color: rgba(87, 87, 104, 0.5);
+}
+.modal-header {
+    opacity: 1;
+}
+.modal-body {
+    opacity: 1;
+}
 
+small {
+    color: red;
+}
+
+#verif {
+    display: none; 
+}
 #barreDeRecherche {
     /* longueur de la barre de recherche */
     width: 450px;
@@ -129,9 +146,11 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
-
+.modal-header {
+    border-bottom: 2px solid #dee2e6
+}
 /* Disposition du menu de navigation */
-.nav__link {
+.nav__link, li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,8 +160,9 @@ img {
 }
 
 /* Changement de couleur de la liste du menu au survol de la souris */
-.nav__link:hover {
+.nav__link:hover, li:hover {
     color: #d9ff00;
+    cursor: pointer;
 }
 
 /* Taille des icônes de la liste du menu */
@@ -307,4 +327,4 @@ img {
         max-height: 100%;
     }
 }
-  
+

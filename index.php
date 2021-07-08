@@ -16,7 +16,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-fluid">
+   <input type="text" id="verif" value="<?php   
+            if(isset($_GET)){
+                echo $_GET['msgError'];
+            }
+        ?>"> 
+      
+    </div>
+    <div class="container-fluid test">
         <header class="header" id="header">
             <nav class="nav">
                 <a href="#" class="nav__logo">
@@ -45,15 +52,11 @@
                                 <i class="uil uil-message nav__icon"></i> Contact
                             </a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#register" class="nav__link">
+                        <li class="nav__item" id="btnConnexion">
                                 <i class="uil uil-user nav__icon"></i> Se connecter 
-                            </a>
                         </li>
-                        <li class="nav__item">
-                            <a href="#login" class="nav__link">
+                        <li class="nav__item" id="btn-inscription">
                                 <i class="uil uil-message nav__icon"></i> S'inscrire
-                            </a>
                         </li>
                     </ul>
                     <i class="uil uil-times nav__close" id="nav-close"></i>
@@ -66,7 +69,84 @@
                 </div>
             </nav>
         </header>
+        <!-- modal inscription -->
+        <div class="modal modal-backdrop" tabindex="-1" id="modal-inscription" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Inscription</h5>
+                  <button type="button" class="close" id="btnCloseModalI" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- le contenu du modal  -->
+                    <form action="scriptPhp/inscription.php" method="POST">
+                        <div class="form-group">
+                            <label for="userNameInscription">Identifiant</label>
+                            <input type="text" class="form-control" name="userNameInscription" id="userNameInscription" placeholder="Entrez votre identifiant">
+                            <small class="msgError"> 
+                                <?php 
+                                    if(isset($_GET)){
+                                        echo $_GET['msgError'];
+                                    } 
+                                ?>
+                            </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="userPasswordInscription">Mot de passe</label>
+                            <input type="password" class="form-control" name="userPasswordInscription" id="userPasswordInscription" placeholder="Entrez votre mot de passe">
+                            <small class="msgError"> </small>
+                        </div>
+                        <div class="form-group">
+                            <label for="userMailInscription">Adresse E-mail</label>
+                            <input type="email" class="form-control" name="userMailInscription" id="userMailInscription" aria-describedby="emailHelp" placeholder="Entrez votre adresse mail">
+                            <small class="msgError"> </small>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Inscription</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
 
+           <!-- modal connexion -->
+        <div class="modal modal-backdrop" tabindex="-2" id="modal-connexion" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Connexion</h5>
+                  <button type="button" class="close" id="btnCloseModalC" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- le contenu du modal  -->
+                    <form action="scriptPhp/connexion.php" method="POST">
+                    <div class="form-group">
+                        <label for="userNameConnexion">Identifiant</label>
+                        <input type="text" class="form-control" name="userNameConnexion" id="userNameConnexion" placeholder="Entrez votre identifiant">
+                    </div>
+                    <div class="form-group">
+                        <label for="userPasswordConnexion">Mot de passe</label>
+                        <input type="password" class="form-control" name="userPasswordConnexion" id="userPasswordConnexion" placeholder="Entrez votre mot de passe">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Connexion</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="row home">
             <!-- position de la souris X,Y par rapport au coin Haut gauche -->
             <input type =texte id='imp1' hidden/>
