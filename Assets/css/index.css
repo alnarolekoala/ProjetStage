@@ -1,14 +1,16 @@
+#inscriptionBtn {
+    margin-top: 5px;
+}
+
+
+/* fond gris a l'ouverture de la modal */
+
 .modal-backdrop
 {
     background-color: rgba(87, 87, 104, 0.5);
 }
-.modal-header {
-    opacity: 1;
-}
-.modal-body {
-    opacity: 1;
-}
 
+/* message erreur des champs */
 small {
     color: red;
 }
