@@ -128,25 +128,19 @@ particulierCheck.addEventListener('change', function() {
 
 })
 
-
-
 // écoute du chargement de la page 
 
 document.addEventListener('DOMContentLoaded', function() {
-  
   if(verif == "1"){
     btnInscription.click();
     verif= "";
   }
- 
 });
 // écoute sur le bouton de fermeture de la modal de connexion 
 btnCloseModalC.addEventListener('click', function () {
   userNameConnexion.value = "";
   userPasswordConnexion.value = "";
   modalC.style.display = 'none';
-  
-
 })
 // écoute sur le bouton de fermeture de la modal d'inscription 
 btnCloseModalI.addEventListener('click', function () {
@@ -154,8 +148,6 @@ btnCloseModalI.addEventListener('click', function () {
   userNameInscription.value = "";
   userMailInscription.value = "";
   userPasswordInscription.value = "";
-
-
 })
 
 
@@ -182,17 +174,7 @@ filtreButton.addEventListener('click', function(){
   else {
     // On cache le detail du filtre
     filtre.setAttribute("hidden", "hidden");
-  }
-    
-    if(filtre.hidden){
-        // on rend le detail du filtre visible
-        filtre.removeAttribute("hidden");
-    }
-    else {
-        // On cache le detail du filtre
-        filtre.setAttribute("hidden", "hidden");
-    }
-    
+  }    
 })
 // fonction qui récupere la position de la souris et actualise la position de l'infoBulle en conséquence
 function RefreshPosition() {
