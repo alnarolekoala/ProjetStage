@@ -181,8 +181,12 @@
                 <button type="button" id="partenaire" class="btn btn-danger mt-1 sizeText">Carte Partenaire</button>
                 <button type="button" id="projet" class="btn btn-primary mt-1 sizeText">Carte des projets/appel d'offre</button>
                 <button type="button" id="prestataire" class="btn btn-primary mt-1 sizeText">Carte des prestataires</button>
+                <div id="switch">Changer pour liste</div>
+                <label  class="switch">
+                    <input id="choice" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
-
             <!-- position de la souris X,Y par rapport au coin Haut gauche -->
             <input type =texte id='imp1' hidden/>
             <input type =texte id='imp2' hidden/>
@@ -195,7 +199,6 @@
             <div id="map" class="col-md-7 col-xl-9" hidden>
             <?php include "SVG/map.php"; ?>
             </div>
-            
             <div id ="searchZone" class="col-md-5 col-xl-3 pt-2">
 
                 <form class="form-inline">

@@ -50,6 +50,21 @@ const prestataire = document.getElementById('prestataire');
 // div conteneur des svg
 const conteneurMap = document.getElementById('map');
 const conteneurMapWorld = document.getElementById('mapWorld'); 
+// switch 
+const choice = document.getElementById('choice');
+// div switch
+const changement = document.getElementById('switch');
+
+choice.addEventListener('click', function(){
+  if(changement.innerHTML == "Changer pour liste"){
+    changement.innerHTML = "Changer pour map";
+  }
+  else {
+    changement.innerHTML= "Changer pour liste";
+    
+  }
+  
+})
 //écoute sur les boutons de changement de carte 
 
 partenaire.addEventListener('click', function() {
