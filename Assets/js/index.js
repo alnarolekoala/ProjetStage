@@ -56,29 +56,63 @@ const choice = document.getElementById('choice');
 const changement = document.getElementById('switch');
 
 choice.addEventListener('click', function(){
+  // si la div contient changer pour liste 
   if(changement.innerHTML == "Changer pour liste"){
+    // on cache les boutons
+    partenaire.setAttribute('hidden', 'hidden');
+    projet.setAttribute('hidden', 'hidden');
+    prestataire.setAttribute('hidden', 'hidden');
+
+    // si la map world n'est pas cacher
+    if(!(conteneurMapWorld.hasAttribute('hidden'))){
+      // on la cache
+      conteneurMapWorld.setAttribute('hidden', 'hidden');
+    }
+    // si la map n'est pas cacher
+    if(!(conteneurMap.hasAttribute('hidden'))){
+      // on la cache
+      conteneurMap.setAttribute('hidden', 'hidden');
+    }
+    // on change la div pour afficher le changement
     changement.innerHTML = "Changer pour map";
   }
+
   else {
+    // sinon on réaffiche les boutons 
+    partenaire.removeAttribute('hidden', 'hidden');
+    projet.removeAttribute('hidden', 'hidden');
+    prestataire.removeAttribute('hidden', 'hidden');
+    // on regarde quel map on doit afficher 
+    if(partenaire.classList.contains('btn-danger')){
+      conteneurMapWorld.removeAttribute('hidden');
+    }
+    if(projet.classList.contains('btn-danger') || prestataire.classList.contains('btn-danger')){
+      conteneurMap.removeAttribute('hidden');
+    }
     changement.innerHTML= "Changer pour liste";
-    
   }
   
 })
 //écoute sur les boutons de changement de carte 
 
 partenaire.addEventListener('click', function() {
-  conteneurMapWorld.removeAttribute('hidden'); 
+  // on montre la carte partenaire
+  conteneurMapWorld.removeAttribute('hidden');
+  // on cache l'autre 
   conteneurMap.setAttribute('hidden', 'hidden');
+  // on change l'espace qu'occupe la barre de recherche 
   document.getElementById('searchZone').classList.remove('col-md-5');
   document.getElementById('searchZone').classList.add('col-md-7');
+
+  // on passe le bouton en rouge pour montrer le focus 
   partenaire.classList.remove('btn-primary');
   partenaire.classList.add('btn-danger');
-
+  // si les autres boutons sont rouge on les remet en bleu 
   if(projet.classList.contains('btn-danger')){
     projet.classList.remove('btn-danger');
     projet.classList.add('btn-primary');
   }
+  // si les autres boutons sont rouge on les remet en bleu 
   if(prestataire.classList.contains('btn-danger')){
     prestataire.classList.remove('btn-danger');
     prestataire.classList.add('btn-primary');
@@ -87,18 +121,22 @@ partenaire.addEventListener('click', function() {
 })
 
 projet.addEventListener('click', function(){
+  // on montre la carte projet
   conteneurMap.removeAttribute('hidden'); 
+  // on cache l'autre 
   conteneurMapWorld.setAttribute('hidden', 'hidden');
+    // on change l'espace qu'occupe la barre de recherche 
   document.getElementById('searchZone').classList.remove('col-md-7');
   document.getElementById('searchZone').classList.add('col-md-5');
-
+ // on passe le bouton en rouge pour montrer le focus 
   projet.classList.remove('btn-primary');
   projet.classList.add('btn-danger');
-  
+  // si les autres boutons sont rouge on les remet en bleu 
   if(partenaire.classList.contains('btn-danger')){
     partenaire.classList.remove('btn-danger');
     partenaire.classList.add('btn-primary');
   }
+  // si les autres boutons sont rouge on les remet en bleu 
   if(prestataire.classList.contains('btn-danger')){
     prestataire.classList.remove('btn-danger');
     prestataire.classList.add('btn-primary');
@@ -106,18 +144,22 @@ projet.addEventListener('click', function(){
 })
 
 prestataire.addEventListener('click', function(){
+  // on montre la carte prestataire
   conteneurMap.removeAttribute('hidden'); 
+  // on cache l'autre 
   conteneurMapWorld.setAttribute('hidden', 'hidden');
+    // on change l'espace qu'occupe la barre de recherche 
   document.getElementById('searchZone').classList.remove('col-md-7');
   document.getElementById('searchZone').classList.add('col-md-5');
-
+ // on passe le bouton en rouge pour montrer le focus 
   prestataire.classList.remove('btn-primary');
   prestataire.classList.add('btn-danger');
-  
+  // si les autres boutons sont rouge on les remet en bleu 
   if(projet.classList.contains('btn-danger')){
     projet.classList.remove('btn-danger');
     projet.classList.add('btn-primary');
   }
+  // si les autres boutons sont rouge on les remet en bleu 
   if(partenaire.classList.contains('btn-danger')){
     partenaire.classList.remove('btn-danger');
     partenaire.classList.add('btn-primary');
