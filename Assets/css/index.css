@@ -23,7 +23,7 @@ small {
     width: 450px;
 }
 
-#filtre {
+#filtre, #filtreProjet, #filtrePrestataire {
     /*  filtre de la recherche avancée */
     border: 1px solid black;
     margin-top: 2%;

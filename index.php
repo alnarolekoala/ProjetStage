@@ -192,12 +192,35 @@
             <input type =texte id='imp2' hidden/>
             <!-- infoBulle -->
             <div id="description" hidden></div>
-            
+            <!-- map du monde -->
             <div id="mapWorld" class="col-md-12 col-xl-9">
             <?php include "SVG/mapWorld.php"; ?>
             </div>
+            <!-- map de l'Afrique -->
             <div id="map" class="col-md-7 col-xl-9" hidden>
             <?php include "SVG/map.php"; ?>
+            </div>
+
+            <!-- pays par liste -->
+            <div id="versionListe" hidden>
+                <!-- include fichier liste pays -->
+                <!-- pays en dur et remplissage du pays par requete sql pour les projets, prestataire -->
+                <!-- <div id="Maroc">
+                    <div id="liste">
+                        liste des projets ou prestataires en fonction du maroc 
+                        <div id="prestataireListe">
+
+                        </div>
+                        <div id="projetListe">
+
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- partenaire forme liste -->
+            <div id="partenaireListe" hidden>
+            <!-- requete sql pour afficher chaque partenaire -->
+
             </div>
             <div id ="searchZone" class="col-md-5 col-xl-3 pt-2">
 
@@ -213,13 +236,40 @@
                     <!-- Visuel du filtre -->
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">test</label>
+                        <label class="form-check-label" for="inlineCheckbox1">Secteur</label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">test  2</label>
+                        <label class="form-check-label" for="inlineCheckbox2">Pays</label>
                     </div>
                 </div>
+
+
+                <div id="filtreProjet" hidden>
+                    <!-- Visuel du filtre -->
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">test projet</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">test projet 2</label>
+                    </div>
+                </div>
+
+                <div id="filtrePrestataire" hidden>
+                    <!-- Visuel du filtre -->
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">test prestataire</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">test prestataire 2</label>
+                    </div>
+                </div>
+               
+
             </div>
         </div>
     </div>

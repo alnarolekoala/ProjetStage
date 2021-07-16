@@ -11,10 +11,13 @@ $msgError = array();
 if (!(isset($_POST['professionnelCheck'])) && !(isset($_POST['particulierCheck'])) ) {
     $msgError[3] = "Veuillez indiquer si vous êtes un particulier ou un professionnel";
   }
+  // si au moins une est coché
   else {
+      // si les 2 sont cochés
     if ((isset($_POST['professionnelCheck'])) && (isset($_POST['particulierCheck'])) ) {
         $msgError[3] = "Veuillez choisir si vous êtes un particulier ou un professionnel(modifiable par la suite)";
     }
+    
     else{
         if(isset($_POST['professionnelCheck'])){
             $check = "1";
@@ -40,10 +43,19 @@ if(empty($userMailInscription)){
 
 if(!empty($msgError)){
     $verif = "1";
+
+
 }
 else {
     $verif = "2";
+    // include "scriptPhp/ConnexionBDD.php"; 
+
+
+    
 }
+
+
+
 
 
 

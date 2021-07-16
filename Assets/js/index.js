@@ -7,6 +7,8 @@ let  paths = map.getElementsByTagName('path');
 // bouton filtre
 const filtreButton = document.getElementById('filtreButton');
 const filtre = document.getElementById('filtre');
+const filtreProjet = document.getElementById('filtreProjet');
+const filtrePrestataire = document.getElementById('filtrePrestataire');
 // contenu de l'info bulle
 let infoBulle = document.getElementById('description');
 // champ pour vérifier si on doit ouvrir ou non une modal 
@@ -117,7 +119,18 @@ partenaire.addEventListener('click', function() {
     prestataire.classList.remove('btn-danger');
     prestataire.classList.add('btn-primary');
   }
-  
+
+  // fermeture de la recherche avancée
+  if(!filtre.hasAttribute('hidden')){
+    filtre.setAttribute('hidden', 'hidden');
+  }
+  if(!filtreProjet.hasAttribute('hidden')){
+    filtreProjet.setAttribute('hidden', 'hidden');
+  }
+  if(!filtrePrestataire.hasAttribute('hidden')){
+    filtrePrestataire.setAttribute('hidden', 'hidden');
+  }
+
 })
 
 projet.addEventListener('click', function(){
@@ -141,6 +154,16 @@ projet.addEventListener('click', function(){
     prestataire.classList.remove('btn-danger');
     prestataire.classList.add('btn-primary');
   }
+// fermeture de la recherche avancée
+  if(!filtre.hasAttribute('hidden')){
+    filtre.setAttribute('hidden', 'hidden');
+  }
+  if(!filtreProjet.hasAttribute('hidden')){
+    filtreProjet.setAttribute('hidden', 'hidden');
+  }
+  if(!filtrePrestataire.hasAttribute('hidden')){
+    filtrePrestataire.setAttribute('hidden', 'hidden');
+  }
 })
 
 prestataire.addEventListener('click', function(){
@@ -163,6 +186,16 @@ prestataire.addEventListener('click', function(){
   if(partenaire.classList.contains('btn-danger')){
     partenaire.classList.remove('btn-danger');
     partenaire.classList.add('btn-primary');
+  }
+ // fermeture de la recherche avancée
+  if(!filtre.hasAttribute('hidden')){
+    filtre.setAttribute('hidden', 'hidden');
+  }
+  if(!filtreProjet.hasAttribute('hidden')){
+    filtreProjet.setAttribute('hidden', 'hidden');
+  }
+  if(!filtrePrestataire.hasAttribute('hidden')){
+    filtrePrestataire.setAttribute('hidden', 'hidden');
   }
 })
 
@@ -223,15 +256,40 @@ btnConnexion.addEventListener('click', function () {
 
 // Evenement clique sur le bouton "filtre"
 filtreButton.addEventListener('click', function(){
-  
-  if(filtre.hidden){
-    // on rend le detail du filtre visible
-    filtre.removeAttribute("hidden");
+  if(partenaire.classList.contains('btn-danger')){
+    if(filtre.hidden){
+      // on rend le detail du filtre visible
+      filtre.removeAttribute("hidden");
+    }
+    else {
+      // On cache le detail du filtre
+      filtre.setAttribute("hidden", "hidden");
+    } 
   }
-  else {
-    // On cache le detail du filtre
-    filtre.setAttribute("hidden", "hidden");
-  }    
+
+  if(prestataire.classList.contains('btn-danger')){
+    if(filtrePrestataire.hidden){
+      // on rend le detail du filtre visible
+      filtrePrestataire.removeAttribute("hidden");
+    }
+    else {
+      // On cache le detail du filtre
+      filtrePrestataire.setAttribute("hidden", "hidden");
+    } 
+  }
+
+
+  if(projet.classList.contains('btn-danger')){
+    if(filtreProjet.hidden){
+      // on rend le detail du filtre visible
+      filtreProjet.removeAttribute("hidden");
+    }
+    else {
+      // On cache le detail du filtre
+      filtreProjet.setAttribute("hidden", "hidden");
+    } 
+  }
+    
 })
 // fonction qui récupere la position de la souris et actualise la position de l'infoBulle en conséquence
 function RefreshPosition() {
